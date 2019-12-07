@@ -17,7 +17,7 @@ function demarrage () {
 	for (var i = 0; i < 8; i ++){
 		document.getElementById('b'+i).addEventListener('keydown', verification)
 	}
-	document.getElementById('decimalInput').addEventListener('keydown', verification)
+	document.getElementById('decimalInput').addEventListener('keydown', verificationDecimal)
 	
 }
 
@@ -37,10 +37,21 @@ function verification(event) {
 		console.log('La touche ' + key + ' est  refuse !') 		//-1 signifie que la recherche n'a pas aboutit
 		event.preventDefault();
 	}
-
-
 }
 
+function verificationDecimal(event) {
+	var key = event.key
+	console.log(key + ' : ' + event.keyCode)
+	var acceptedKey = ['0','1','2','3','4','5','6','7','8','9','Backspace','Tab']
+	var decimalValeur = document.getElementById('decimalInput').value
+	console.log(decimalValeur)
+	if(acceptedKey.indexOf(key) != -1 && decimalInput < 255) {
+		console.log('La touche ' + key + ' est accepte !')
+	} else {
+		console.log('La touche ' + key + ' est  refuse !') 		
+		event.preventDefault();
+	}
+}
 ////////////////////////////////////////
 //////////////CORPS/////////////////////
 ////////////////////////////////////////
