@@ -42,16 +42,20 @@ function verification(event) {
 function verificationDecimal(event) {
 	var key = event.key
 	console.log(key + ' : ' + event.keyCode)
-	var acceptedKey = ['0','1','2','3','4','5','6','7','8','9','Backspace','Tab','ArrowLeft','ArrowRight','Delete']
+	var acceptedKey = ['0','1','2','3','4','5','6','7','8','9']
+	var otherAccepterKey = ['Backspace','Tab','ArrowLeft','ArrowRight','Delete']
 	var decimalValeur = document.getElementById('decimalInput').value
 	console.log(decimalValeur)
 	if(acceptedKey.indexOf(key) != -1 && decimalValeur.length < 3) {
 		console.log('La touche ' + key + ' est accepte !')
 	} else {
+		if(otherAccepterKey.indexOf(key) != -1) {'Touche de Navigation accepté'} else {
 		console.log('La touche ' + key + ' est  refuse !') 		//-1 signifie que la recherche n'a pas aboutit
 		event.preventDefault();
+		}
 	}
 }
+
 
 ////////////////////////////////////////
 //////////////CORPS/////////////////////
