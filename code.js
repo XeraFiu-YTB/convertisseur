@@ -1,7 +1,7 @@
 /////////////////////////////////////////
 ///// variables globales/////////////////
 ////////////////////////////////////////
-var bit = new Array(8) // CrÈe une Array de 8 cases vides
+var bit = new Array(8) // Cr√©e une Array de 8 cases vides
 var binaireValue = false
 
 /////////////////////////////////////////
@@ -10,7 +10,7 @@ var binaireValue = false
 
 
 function demarrage () { 
-// Ici on rÈcupËre les objets HTML dont on a besoin gr‚ce ‡ getElementById 
+// Ici on r√©cup√®re les objets HTML dont on a besoin gr√¢ce √† getElementById 
 	var down = document.getElementById('down').addEventListener('click', convertirEnDecimal)
 	var up = document.getElementById('up').addEventListener('click', convertirEnBinaire)
 // Ici on abonne les objets dont on a besoin avec addEventListener
@@ -26,12 +26,12 @@ function demarrage () {
 //////////////fonctions/////////////////
 ////////////////////////////////////////
 
-//vÈrification de la touche pour les binaires
+//v√©rification de la touche pour les binaires
 function verification(event) {
 	var key = event.key
 	console.log(key + ' : ' + event.keyCode)
-	var acceptedKey = ['1','0','Backspace','Tab','ArrowLeft','ArrowRight','Delete'] 				//Les touches autorisÈes (on ne fait pas avec le keyCode car 49=& && 49=1)
-	if(acceptedKey.indexOf(key) != -1) { 						//Si la recherche de la touche dans le tableau est trouvÈ alors la touche est acceptÈ
+	var acceptedKey = ['1','0','Backspace','Tab','ArrowLeft','ArrowRight','Delete'] 				//Les touches autoris√©es (on ne fait pas avec le keyCode car 49=& && 49=1)
+	if(acceptedKey.indexOf(key) != -1) { 						//Si la recherche de la touche dans le tableau est trouv√© alors la touche est accept√©
 		console.log('La touche ' + key + ' est accepte !')
 	} else {
 		console.log('La touche ' + key + ' est  refuse !') 		//-1 signifie que la recherche n'a pas aboutit
@@ -42,17 +42,14 @@ function verification(event) {
 function verificationDecimal(event) {
 	var key = event.key
 	console.log(key + ' : ' + event.keyCode)
-	var acceptedKey = ['0','1','2','3','4','5','6','7','8','9']
-	var otherAccepterKey = ['Backspace','Tab','ArrowLeft','ArrowRight','Delete']
+	var acceptedKey = ['0','1','2','3','4','5','6','7','8','9','Backspace','Tab','ArrowLeft','ArrowRight','Delete']
 	var decimalValeur = document.getElementById('decimalInput').value
 	console.log(decimalValeur)
 	if(acceptedKey.indexOf(key) != -1 && decimalValeur.length < 3) {
 		console.log('La touche ' + key + ' est accepte !')
 	} else {
-		if(otherAccepterKey.indexOf(key) != -1) {'Touche de Navigation acceptÈ'} else {
 		console.log('La touche ' + key + ' est  refuse !') 		//-1 signifie que la recherche n'a pas aboutit
 		event.preventDefault();
-		}
 	}
 }
 
@@ -60,13 +57,13 @@ function verificationDecimal(event) {
 //////////////CORPS/////////////////////
 ////////////////////////////////////////
 function convertirEnDecimal() {
-	bit = [] //RÈnitialisation de l'array
-	//RÈcupÈration des valeurs donnÈes dans un tableau
+	bit = [] //R√©nitialisation de l'array
+	//R√©cup√©ration des valeurs donn√©es dans un tableau
 	for (var i = 0; i < 8; i++){
 		bit.push(document.getElementById('b'+i).value)
 	}
 	console.log(bit)
-	//Soit bit[0] correspond ‡ la valeur de b0 etc..
+	//Soit bit[0] correspond √† la valeur de b0 etc..
 	var valeur = (bit[0]*Math.pow(2,7)) +(bit[1]*Math.pow(2,6)) + (bit[2]*Math.pow(2,5)) + (bit[3]*Math.pow(2,4)) + (bit[4]*Math.pow(2,3)) + (bit[5]*Math.pow(2,2)) + (bit[6]*Math.pow(2,1)) + (bit[7]*Math.pow(2,0))
 	document.getElementById('decimalInput').value = valeur
 	console.log('Decimal : ' + valeur)
@@ -96,4 +93,4 @@ function convertirEnHexaDecimal() {
 
 }
 
-window.addEventListener("load", demarrage); // attends le chargement complet pour dÈmarrer
+window.addEventListener("load", demarrage); // attends le chargement complet pour d√©marrer
