@@ -50,10 +50,10 @@ Footer {
 .binaireInput
 {
     	box-shadow: 0px 0px 5px black;
-    	width: 5%;
-    	margin: 1%;
+    	width: auto;
+    	margin: 2%;
     	text-align: center;
-	padding:2px;
+	padding: 0px;
 }
 
 #binaireSection
