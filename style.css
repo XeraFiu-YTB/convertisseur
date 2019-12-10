@@ -10,17 +10,13 @@ body {
 
 #left
 {
-	position: absolute;
-	top:0px;
-	left:0px;
+	float: left;
 	width:20%;
 	height:100%:
 }
 #right
 {
-	position: absolute;
-	top:0px;
-	right:0px;
+	float: right;
 	width:20%;
 	height:100%;
 }
