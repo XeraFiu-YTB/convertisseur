@@ -8,6 +8,23 @@ body {
     height : 100%;
 }
 
+#left
+{
+	position: absolute;
+	top:0px;
+	left:0px;
+	width:20%;
+	height:100%:
+}
+#right
+{
+	position: absolute;
+	top:0px;
+	right:0px;
+	width:20%;
+	height:100%;
+}
+
 Header {
 	background-color : rgba(200,200,200,0.8);
 	color : black;
