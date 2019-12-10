@@ -11,6 +11,7 @@ body {
 #left
 {
 	float: left;
+	position:relative;	
 	width:20%;
 	height:100%;
 	overflow: auto; /*hidden*/
@@ -18,6 +19,7 @@ body {
 #right
 {
 	float: right;
+	position:relative;	
 	width:20%;
 	height:100%;
 	overflow: auto;
