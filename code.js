@@ -16,7 +16,8 @@ function demarrage () {
 	for (var i = 0; i < 8; i ++){
 		document.getElementById('b'+i).addEventListener('click', changeBinaire)
 	}
-	matrix()
+	matrixLeft()
+	matrixRight()
 	
 }
 
@@ -92,11 +93,9 @@ function changeBinaire() {
 ////////////////////////////////////////
 //////////////Esthétique////////////////
 ////////////////////////////////////////
-function matrix() {
+function matrixLeft() {
 	var canvasLeft = document.getElementById("left");
         var ctxLeft = canvasLeft.getContext("2d");
-	var canvasRight = document.getElementById("right");
-        var ctxRight = canvasRight.getContext("2d");
 	
         var matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
 	//On sépare les éléments
@@ -125,6 +124,46 @@ function matrix() {
                 //sending the drop back to the top randomly after it has crossed the screen
                 //adding a randomness to the reset to make the drops scattered on the Y axis
                 if( drops[i] * font_size > canvasLeft.height && Math.random() > 0.975 )
+                    drops[i] = 0;
+
+                //incrementing Y coordinate
+                drops[i]++;
+            }
+        }
+
+        setInterval( draw, 35 );
+}
+function matrixRight() {
+	var canvasRight = document.getElementById("right");
+        var ctxRight = canvasRight.getContext("2d");
+	
+	var matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
+	//On sépare les éléments
+        matrix = matrix.split("");
+	console.log(`matrix:${matrix}`)
+
+        var font_size = 10; //
+        var columns = canvasLeft.width / font_size; //le Nombre de colonnes
+        var drops = [];
+        for(var x = 0; x < columns; x++)
+            drops[x] = 1; 
+
+        function draw()
+        {
+            ctxRight.fillStyle = "rgba(0, 0, 0, 0.04)";
+            ctxRight.fillRect(0, 0, canvasRight.width, canvasRight.height);
+
+            ctxRight.fillStyle = "#0F0"; //vert
+            ctxRight.font = font_size + "px arial";
+            //looping over drops
+            for( var i = 0; i < drops.length; i++ )
+            {
+                var text = matrix[ Math.floor( Math.random() * matrix.length ) ];
+                ctxRight.fillText(text, i * font_size, drops[i] * font_size);
+
+                //sending the drop back to the top randomly after it has crossed the screen
+                //adding a randomness to the reset to make the drops scattered on the Y axis
+                if( drops[i] * font_size > canvasRight.height && Math.random() > 0.975 )
                     drops[i] = 0;
 
                 //incrementing Y coordinate
