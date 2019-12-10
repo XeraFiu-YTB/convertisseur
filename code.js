@@ -143,7 +143,7 @@ function matrixRight() {
 	console.log(`matrix:${matrix}`)
 
         var font_size = 10; //
-        var columns = canvasLeft.width / font_size; //le Nombre de colonnes
+        var columns = canvasRight.width / font_size; //le Nombre de colonnes
         var drops = [];
         for(var x = 0; x < columns; x++)
             drops[x] = 1; 
