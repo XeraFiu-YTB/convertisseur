@@ -10,12 +10,10 @@ var binaireValue = false
 
 
 function demarrage () { 
-// Ici on récupère les objets HTML dont on a besoin grâce à getElementById 
 	var down = document.getElementById('down').addEventListener('click', convertirEnDecimal)
 	var up = document.getElementById('up').addEventListener('click', convertirEnBinaire)
-// Ici on abonne les objets dont on a besoin avec addEventListener
 	for (var i = 0; i < 8; i ++){
-		document.getElementById('b'+i).addEventListener('keydown', verification)
+		document.getElementById('b'+i).addEventListener('click', changeBinaire)
 	}
 	document.getElementById('decimalInput').addEventListener('keydown', verificationDecimal)
 	
@@ -25,19 +23,6 @@ function demarrage () {
 ////////////////////////////////////////
 //////////////fonctions/////////////////
 ////////////////////////////////////////
-
-//vérification de la touche pour les binaires
-function verification(event) {
-	var key = event.key
-	console.log(key + ' : ' + event.keyCode)
-	var acceptedKey = ['1','0','Backspace','Tab','ArrowLeft','ArrowRight','Delete'] 				//Les touches autorisées (on ne fait pas avec le keyCode car 49=& && 49=1)
-	if(acceptedKey.indexOf(key) != -1) { 						//Si la recherche de la touche dans le tableau est trouvé alors la touche est accepté
-		console.log('La touche ' + key + ' est accepte !')
-	} else {
-		console.log('La touche ' + key + ' est  refuse !') 		//-1 signifie que la recherche n'a pas aboutit
-		event.preventDefault();
-	}
-}
 
 function verificationDecimal(event) {
 	var key = event.key
@@ -95,6 +80,12 @@ function convertirEnBinaire() {
 
 function convertirEnHexaDecimal() {
 
+}
+
+function changeBinaire() {
+	var valeur = this.value
+	if(valeur == 0) {valeur = 1} else {valeur = 0}
+	this.value = valeur
 }
 
 window.addEventListener("load", demarrage); // attends le chargement complet pour démarrer
