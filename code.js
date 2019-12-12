@@ -16,8 +16,8 @@ function demarrage () {
 	for (var i = 0; i < 8; i ++){
 		document.getElementById('b'+i).addEventListener('click', changeBinaire)
 	}
-	matrixLeft()
-	matrixRight()
+	//matrixLeft()
+	//matrixRight()
 	
 }
 
@@ -93,7 +93,7 @@ function changeBinaire() {
 ////////////////////////////////////////
 //////////////Esthétique////////////////
 ////////////////////////////////////////
-function matrixLeft() {
+/*function matrixLeft() {
 	var canvasLeft = document.getElementById("left");
         var ctxLeft = canvasLeft.getContext("2d");
 	
@@ -172,5 +172,5 @@ function matrixRight() {
         }
 
         setInterval( draw, 35 );
-}
+}*/
 window.addEventListener("load", demarrage); // attends le chargement complet pour démarrer
