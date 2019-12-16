@@ -11,7 +11,7 @@ body {
 Header {
     background-color : rgb(212, 84, 84);
 	color : white;
-	font-size : 32px;
+	font-size : 1.9em;
 	padding : 10px;
 	display : flex;
     flex-direction : column;
