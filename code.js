@@ -82,9 +82,8 @@ function verificationHexaDecimal(event) {
 	var hexaValeur = document.getElementById('hexaDecimalInput').value
 	var separation = hexaValeur.split("")
 		if(acceptedKey.indexOf(key) != -1) {
-			if(isNaN(hexaValeur)) {hexaValeur = document.getElementById('hexaDecimalInput'),console.log('hexaValeur : isNaN')} //Si hexaValeur n'est pas un nombre, prend la valeur 0 (pour régler le problème de 'vide')
 			console.log(`hexaValeur:${hexaValeur} | longueur:${hexaValeur.length}`)
-			if(hexaValeur.length == 1) {newHexaDecimalValue = `${hexaValeur}${key}`} else {newHexaDecimalValue = `${hexaValeur}${key}`}
+			if(hexaValeur.length == 1) {newHexaDecimalValue = `${hexaValeur}${key}`} else {newHexaDecimalValue = `0${key}`}
 			console.log(`newHexaDecimalValue:${newHexaDecimalValue}`)
 			convertirHexaDecimalEnDecimal()
 			convertirEnBinaire()
@@ -94,7 +93,7 @@ function verificationHexaDecimal(event) {
 		}
 		if(key == 'Backspace'){
 			console.log('Suppression')
-			if(hexaValeur.length == 2) {newHexaDecimalValue = `${separation[0]}0`}
+			if(hexaValeur.length == 2) {newHexaDecimalValue = `0${separation[0]}`}
 			if(hexaValeur.length <= 1) {newHexaDecimalValue = '00'} //double 0 sinon erreur pour split dans convertirHexaDecimalEnDecimal()
 			convertirHexaDecimalEnDecimal()
 			convertirEnBinaire()
@@ -181,7 +180,7 @@ function convertirHexaDecimalEnDecimal() {
 			valeur = valeur + (hexa[i]*Math.pow(16,1-i)) // 9 -> 9*16^1 ou 9 -> 9*16^0
 		} else { //Si hexa[i] est une lettre alors on prend la valeur correspondante dans le tableau
 			console.log('Lettre')
-			valeur = valeur + hexaTableau[hexaTableau.indexOf(hexa[i]) - 1]
+			valeur = valeur + (hexaTableau[hexaTableau.indexOf(hexa[i]) - 1] * Math.pow(16,1-i))
 		}
 	}
 	document.getElementById('decimalInput').value = valeur
