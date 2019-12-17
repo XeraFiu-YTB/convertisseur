@@ -63,6 +63,7 @@ function verificationHexaDecimalMobile() {
 	var decimalValue  = prompt("Chosir 2 éléments un chiffre en 0 et 9 ou/et une lettre entre A et F")
 	decimalValue = decimalValue.toUpperCase()// Met en masjucule (ff devient FF)
 	if(decimalValue.length <=2) {
+		if(acceptedKey.indexOf(decimalValue) == -1) {document.getElementById('hexaDecimalInput').value = 'Erreur'}
 		if(decimalValue.length == 2) {
 			var separation = decimalValue.split("")
 			if(acceptedKey.indexOf(separation[0]) !=1 && acceptedKey.indexOf(separation[1]) != 1) {newHexaDecimalValue = decimalValue}
@@ -72,9 +73,7 @@ function verificationHexaDecimalMobile() {
 		document.getElementById('hexaDecimalInput').value = newHexaDecimalValue
 		convertirHexaDecimalEnDecimal()
 		convertirEnBinaire()
-	} else {
-		document.getElementById('hexaDecimalInput').value = 'Erreur'
-	}
+	} else {document.getElementById('hexaDecimalInput').value = 'Erreur'}
 }
 
 function verificationDecimal(event) {
