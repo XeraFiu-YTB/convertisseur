@@ -61,6 +61,7 @@ function verificationDecimalMobile() {
 function verificationHexaDecimalMobile() {
 	var acceptedKey = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F']
 	var decimalValue  = prompt("Chosir 2 éléments un chiffre en 0 et 9 ou/et une lettre entre A et F")
+	decimalValue = decimalValue.toUpperCase()// Met en masjucule (ff devient FF)
 	if(decimalValue.length <=2) {
 		if(decimalValue.length == 2) {
 			var separation = decimalValue.split("")
