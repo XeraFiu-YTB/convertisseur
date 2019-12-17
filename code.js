@@ -50,25 +50,29 @@ function changeBinaire() {
 function verificationDecimalMobile() {
 	var decimalValue  = prompt("Chosir un nombre entier entre 0 et 255")
 	if(decimalValue <= 255) {
-	document.getElementById('decimalInput').value = decimalValue
-	newDecimalValue = decimalValue
-	convertirEnBinaire()
-	convertirBinaireEnHexaDecimal()
+		document.getElementById('decimalInput').value = decimalValue
+		newDecimalValue = decimalValue
+		convertirEnBinaire()
+		convertirBinaireEnHexaDecimal()
 	} else {
-	document.getElementById('decimalInput').value = 'Erreur'
+		document.getElementById('decimalInput').value = 'Erreur'
 	}
 }
 function verificationHexaDecimalMobile() {
+	var acceptedKey = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F']
 	var decimalValue  = prompt("Chosir 2 éléments un chiffre en 0 et 9 ou/et une lettre entre A et F")
 	if(decimalValue.length <=2) {
-	if(decimalValue.length == 2) {newHexaDecimalValue = decimalValue}
-	if(decimalValue.length == 1) {newHexaDecimalValue = `0${decimalValue}`}
-	if(decimalValue.length == 0) {newHexaDecimalValue = '00'}
-	document.getElementById('hexaDecimalInput').value = newHexaDecimalValue
-	convertirHexaDecimalEnDecimal()
-	convertirEnBinaire()
+		if(decimalValue.length == 2) {
+			var separation = decimalValue.split("")
+			if(acceptedKey.indexOf(separation[0]) !=1 && acceptedKey.indexOf(separation[1]) != 1) {newHexaDecimalValue = decimalValue}
+		}
+		if(decimalValue.length == 1 && decimalValue) {newHexaDecimalValue = `0${decimalValue}`}
+		if(decimalValue.length == 0) {newHexaDecimalValue = '00'}
+		document.getElementById('hexaDecimalInput').value = newHexaDecimalValue
+		convertirHexaDecimalEnDecimal()
+		convertirEnBinaire()
 	} else {
-	document.getElementById('hexaDecimalInput').value = 'Erreur'
+		document.getElementById('hexaDecimalInput').value = 'Erreur'
 	}
 }
 
