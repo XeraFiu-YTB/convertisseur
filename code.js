@@ -45,7 +45,7 @@ function verificationDecimal(event) {
 	var separation = decimalValeur.split("") 
 		if(acceptedKey.indexOf(key) != -1) {  //On vérifie avant si key est un chiffre
 			newDecimalValue = `${decimalValeur}${key}` //newDecimalValue Prend la valeur actuelle `${25}${5}` donne 255 (Car JavaScript respecte le standart ECMAScript)
-				if(newDecimalValue <= 255) {
+				if(newDecimalValue < 255) {
 					console.log('La touche ' + key + ' est accepte !')
 					convertirEnBinaire()
 					convertirBinaireEnHexaDecimal()
