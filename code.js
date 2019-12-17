@@ -66,7 +66,7 @@ function verificationHexaDecimalMobile() {
 			var separation = decimalValue.split("")
 			if(acceptedKey.indexOf(separation[0]) !=1 && acceptedKey.indexOf(separation[1]) != 1) {newHexaDecimalValue = decimalValue}
 		}
-		if(decimalValue.length == 1 && decimalValue) {newHexaDecimalValue = `0${decimalValue}`}
+		if(decimalValue.length == 1 && acceptedKey.indexOf(decimalValue) != -1) {newHexaDecimalValue = `0${decimalValue}`}
 		if(decimalValue.length == 0) {newHexaDecimalValue = '00'}
 		document.getElementById('hexaDecimalInput').value = newHexaDecimalValue
 		convertirHexaDecimalEnDecimal()
