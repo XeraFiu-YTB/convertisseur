@@ -33,6 +33,7 @@ header
 	box-shadow: 0px 0px 10px white;
 	margin-top: auto; /*Permet de centrer verticalement*/
 	margin-bottom: auto;
+	overflow:scroll;
 }
 
 .prenom
@@ -58,5 +59,4 @@ header
 	border-left: 5px solid rgb(91, 222, 117);
 	margin-left: 5px;
 	padding-left: 10px;
-	overflow:scroll;
 }
