@@ -45,6 +45,31 @@ function changeBinaire() {
 	console.log('|||||End Convertion Binaire -> All|||||')
 }
 
+function verificationDecimalMobile() {
+	var decimalValue  = prompt("Chosir un nombre entier entre 0 et 255")
+	if(decimalValue <= 255) {
+	document.getElementById('decimalInput').value = decimalValue
+	newDecimalValue = decimalValue
+	convertirEnBinaire()
+	convertirBinaireEnHexaDecimal()
+	} else {
+	document.getElementById('decimalInput').value = 'Erreur'
+	}
+}
+function verificationHexaDecimalMobile() {
+	var decimalValue  = prompt("Chosir 2 éléments un chiffre en 0 et 9 ou/et une lettre entre A et F")
+	if(decimalValue.length <=2) {
+	if(decimalValue.length == 2) {newHexaDecimalValue = decimalValue}
+	if(decimalValue.length == 1) {newHexaDecimalValue = `0${decimalValue}`}
+	if(decimalValue.length == 0) {newHexaDecimalValue = '00'}
+	document.getElementById('hexaDecimalInput').value = newHexaDecimalValue
+	convertirHexaDecimalEnDecimal()
+	convertirEnBinaire()
+	} else {
+	document.getElementById('hexaDecimalInput').value = 'Erreur'
+	}
+}
+
 function verificationDecimal(event) {
 	console.clear()
 	console.log('|||||Vérification Décimal|||||')
