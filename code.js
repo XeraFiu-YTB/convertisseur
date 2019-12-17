@@ -14,6 +14,7 @@ var newHexaDecimalValue = 0
 
 
 function demarrage () { 
+	verifBrowser()
 	document.getElementById('decimalInput').addEventListener('keydown', verificationDecimal)
 	document.getElementById('hexaDecimalInput').addEventListener('keydown', verificationHexaDecimal)
 	for (var i = 0; i < 8; i ++){
@@ -22,6 +23,15 @@ function demarrage () {
 	
 }
 
+function verifBrowser() {
+	var mobile = false
+	if( navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)){
+	    mobile = true
+	  }
+	if(mobile == true) {
+		
+	}
+}
 
 ////////////////////////////////////////
 //////////////fonctions/////////////////
