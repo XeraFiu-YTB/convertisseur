@@ -17,12 +17,14 @@ function demarrage () {
 	
 	//Vérification PC ou Mobile
 	if(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)){
-	    	document.getElementById('decimalInput').attributes["type"] = "button"
+	    	console.log("Mobile")
+		document.getElementById('decimalInput').attributes["type"] = "button"
 		document.getElementById('hexaDecimalInput').attributes["type"] = "button"
 		document.getElementById('decimalInput').addEventListener('click', verificationDecimalMobile)
 		document.getElementById('hexaDecimalInput').addEventListener('click', verificationHexaDecimalMobile)
 		
 	  } else {
+		  console.log("PC")
 		document.getElementById('decimalInput').addEventListener('keydown', verificationDecimal)
 		document.getElementById('hexaDecimalInput').addEventListener('keydown', verificationHexaDecimal)
 	}
