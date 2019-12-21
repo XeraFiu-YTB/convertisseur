@@ -1,2 +1,2 @@
 # convertisseur
-Convertisseur Binaire / Decimal
+Convertisseur Binaire / Decimal / HexaDecimal
