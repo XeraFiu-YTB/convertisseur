@@ -2,7 +2,7 @@
 	<title>Répartition des tâches</title>
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width", target-densitydpi=device-dpi"/>
+		<meta name="viewport" content="width=device-width"/>
 		<link href="style.css" rel="stylesheet" type="text/css"  media="screen"/> 
 	</head>
 	<body>
@@ -10,28 +10,37 @@
 			<p id="mainTitle">Répartition des tâches</p>
 		</header>
 		<section id="separationTache">
-
+			<p id="introFonctionnement">Pour convertir, nous avons réalisé 4 fonctions, Binaire en Décimal, Décimal en Binaire, Binaire en HexaDécimal et HexaDécimal en Décimal. Ainsi nous pouvons réaliser une fonction puis une autre et encore une autre sans faire trop de fonctions. Exemple : J'ai 255 en décimal, on le convertit en Binaire puis on convertit ce Binaire en HexaDécimal.</p>
 			<section class="tache">
 				<p class="prenom">Nathan</p>
+					<p class="tacheTitle">CSS des tâches</p>
+						<p class="tacheDescription">Création d'une page pour la répartition des tâches avec nom de la tâche et sa description.</p>
+					<p class="tacheTitle">Adaptation Mobile</p>
+						<p class="tacheDescription">Modification de la vérification selon le device car les event.keyCode ne sont pas les mêmes, et mise en pourcentage des dimensions dans le CSS et em pour la police.</p>
+					<p class="tacheTitle">Conversion Automatique</p>
+						<p class="tacheDescription">Suppression des boutons UP et DOWN et agencement du code afin de le faire fonctionner tout seul, pour cela nous devons récuperer la valeur de l'input et y ajouter la touche pressé.</p>
+					<p class="tacheTitle">Mise en place de logs</p>
+						<p class="tacheDescription">Création de logs dans la console afin de voir le fonctionnement du code et de mieux retrouver les  erreurs (log de début de fonction + fin de fonction)</p>
+					<p class="tacheTitle">Vérification PC</p>
+						<p class="tacheDescription">On accepte les touches de naviguation comme les fleches de déplacement et les touches de supression, on accepte également les chiffres pour le décimale et les lettres de A à F pour l'hexadécimal, on ajoute également une limitation de caractères.</p>
 					<p class="tacheTitle">Décimal -> Binaire</p>
-						<p class="tacheDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p class="tacheTitle">Vérification Décimal</p>
-						<p class="tacheDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p class="tacheTitle">Héxadécimal</p>
-						<p class="tacheDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+						<p class="tacheDescription">Utilisation d'un tableau pour enregistrer les valeurs des calculs provenant de la boucle, si le nombre décimal est plus grand que 2 exposant la position en fonction de i alors on ajoute 1 au tableau sinon on ajoute 0. Puis on fait une boucle pour placer les valeurs du tableau dans les bits.</p>
+					<p class="tacheTitle">Héxadécimal -> Décimal</p>
+						<p class="tacheDescription">Séparation des 2 caractères afin de pouvoir en choisir 1, on regarde si il correspond à une lettre en le cherchant dans le tableau et on prend la position -1 pour avoir le nombre correspondant, si ce n'est pas le cas alors c'est un chiffre donc on multiplie par 16 exposant la position (0 ou 1) et enfin on additionne le tout pour formé un nombre décimal.</p>
 			</section>
-
 			<section class="tache">
 				<p class="prenom">Antonin</p>
-					<p class="tacheTitle">Binaire -> Décimal</p>
-						<p class="tacheDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p class="tacheTitle">Esthétique</p>
-						<p class="tacheDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p class="tacheTitle">CSS de l'accueil</p>
+						<p class="tacheDescription">Création d'une page pour la répartition des tâches avec nom de la tâche et sa description.</p>
 					<p class="tacheTitle">Vérification Binaire</p>
-						<p class="tacheDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p class="tacheDescription">Remplacement des inputs de text par des inputs en bouton afin de simplifié l'utilisation du site et également de retirer la vérification. Si la valeur du bouton est 0 alors elle devient 1.</p>
+					<p class="tacheTitle">Vérification Mobile</p>
+						<p class="tacheDescription">Les mobiles doivent cliquer pour entrer une valeur qui va ensuite être vérifié selon les critères. Si les conditions ne sont pas respectées alors on dit qu'il y a une erreur.</p>
+					<p class="tacheTitle">Binaire -> Décimal</p>
+						<p class="tacheDescription">Création d'un boucle où l'on récupère la valeur du Bit que l'on va multiplier par 2 exposant  la position du bit et on ajoute cette valeur à une variable pour additioner les résultats de l'octet.</p>
+					<p class="tacheTitle">Binaire -> Héxadécimal</p>
+						<p class="tacheDescription">On sait que dans 1 octet il y a 8 bits, on sépare donc l'octet en 2 puis dans une boucle on va multiplier par 2 exposant le positionnement dans le demi-octet. Ensuite on regarde si le nombre est supérieur à 9 pour savoir si il faut le convertir en une lettre, au début j'avais fait plusieurs conditions pour les nombres de 10 à 15 mais Nathan m'a aidé en utilisant un tableau afin de trouver directement la lettre correspondante qui se trouve à une place plus loin que le nombre. Puis on affiche les 2 demi octets pour donner 2 caractères.</p>
 			</section>
-
 		</section>
 	</body>
 </html>

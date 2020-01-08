@@ -8,7 +8,15 @@ header
 	color: white;
 	font-family: Roboto Mono,Source Code Pro,Consolas,monospace;
 	font-size: 50px;
-
+}
+#introFonctionnement 
+{
+	text-align: center;
+	color:white;
+	font-family: Roboto Mono,Source Code Pro,Consolas,monospace;
+	position: absolute;
+	padding-right: 5%;
+	padding-left: 5%;
 }
 
 #separationTache
@@ -31,8 +39,7 @@ header
 	border: 3px solid black;
 	border-radius: 10px;
 	box-shadow: 0px 0px 10px white;
-	margin-top: auto; /*Permet de centrer verticalement*/
-	margin-bottom: auto;
+	margin-top: 8%; /*Permet de centrer verticalement*/
 	overflow:scroll;
 }
 
