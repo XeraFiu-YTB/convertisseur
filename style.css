@@ -59,7 +59,6 @@ Footer {
     flex-direction: column;
 }
 .binaireInput{
-    box-shadow: 0px 0px 50px white; 
     width : 5%;/*8 boutons*/ 
     margin : 2%;
     align-items : center;
@@ -67,6 +66,7 @@ Footer {
 }
 .binaireInput:hover {
 	background-color: salmon;
+	color:green;
 }
 #binaireSection{
     display : flex;
