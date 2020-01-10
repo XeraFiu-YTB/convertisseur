@@ -88,10 +88,16 @@ Footer {
 	font-family: Roboto Mono,Source Code Pro,Consolas,monospace;
 	font-size: 15px;
 }
+.tacheTitle:hover {
+	border-bottom: 5px solid dodgerblue;
+}
 
 .tacheDescription
 {
 	border-left: 5px solid rgb(91, 222, 117);
 	margin-left: 5px;
 	padding-left: 10px;
+}
+.tacheDescription:hover {
+	border-left: 5px solid firebrick;
 }
